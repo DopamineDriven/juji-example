@@ -12,7 +12,8 @@
     "build": "yarn codegen && next build",
     "test": "yarn codegen && jest",
     "start": "next start -p 4040",
-    "tsconfig:effective": "tsc --showConfig"
+    "tsconfig:effective": "tsc --showConfig",
+    "postinstall": "patch-typed-document-node"
   },
   "husky": {
     "hooks": {
