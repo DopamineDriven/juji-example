@@ -77,7 +77,6 @@ typings/
 
 # Next.js build output
 .next
-.env.local
 
 # Nuxt.js build / generate output
 .nuxt
@@ -103,3 +102,14 @@ dist
 
 # TernJS port file
 .tern-port
+
+# graphql-let
+__generated__
+*.graphql.d.ts
+*.graphqls.d.ts
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
