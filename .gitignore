@@ -105,7 +105,8 @@ dist
 
 # graphql-let
 __generated__
-
+*.graphql.d.ts
+*.graphqls.d.ts
 
 # local env files
 .env.local
