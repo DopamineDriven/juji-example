@@ -30,7 +30,7 @@ interface NavBarFC extends FC<NavbarProps> {}
 
 const Navbar: NavBarFC = ({ className }) => {
 	const classNameParent = className;
-	const navList = links.map((link, index: number) => (
+	const navList = links.map((link) => (
 		<Fragment key={link.label}>
 			<li key={link.href} className='inline-block mx-4'>
 				<Link href={link.href} as={`${link.href}`} passHref key={link.label}>

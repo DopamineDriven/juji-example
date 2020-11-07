@@ -7,14 +7,16 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "codegen": "graphql-let",
     "dev": "next -p 3030",
     "build": "next build",
+    "test": "yarn codegen && jest",
     "start": "next start -p 4040",
-    "tsconfig:effective": "yarn tsc && tsc --showConfig"
+    "tsconfig:effective": "tsc --showConfig"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn tsconfig:effective && pretty-quick"
+      "pre-commit": "yarn tsc && yarn codegen && pretty-quick && yarn tsconfig:effective"
     }
   },
   "dependencies": {
