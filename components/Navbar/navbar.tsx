@@ -1,7 +1,7 @@
 import { FC, Fragment } from 'react';
 import Link from 'next/link';
 import s from './navbar.module.css';
-import NewlineLogo from '@components/Logo';
+import NewlineLogo from '../Logo/navbar-logo';
 
 interface NavRef {
 	href: string;
@@ -30,7 +30,7 @@ interface NavBarFC extends FC<NavbarProps> {}
 
 const Navbar: NavBarFC = ({ className }) => {
 	const classNameParent = className;
-	const navList = links.map((link) => (
+	const navList = links.map(link => (
 		<Fragment key={link.label}>
 			<li key={link.href} className='inline-block mx-4'>
 				<Link href={link.href} as={`${link.href}`} passHref key={link.label}>

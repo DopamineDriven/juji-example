@@ -3,11 +3,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useViewerQuery, ViewerDocument } from '../lib/viewer.graphql';
 import { initializeApollo } from '../lib/apollo';
-import { Meta, Navbar } from '@components/index';
+import { Meta, Navbar } from '../components/index';
 import { GetStaticProps } from 'next';
 
 const Index = () => {
 	const { viewer } = useViewerQuery().data!;
+	const { name, status } = viewer;
 	return (
 		<Fragment>
 			<Meta />
@@ -17,8 +18,8 @@ const Index = () => {
 			<div className='flex mx-5 my-5 min-w-full w-full'>
 				<Navbar className='min-w-full w-full border-b-2 -mx-5' />
 			</div>
-			<div className='flex mx-auto text-somaRoman min-w-full w-full'>
-				You're signed in as {viewer.name} and you're {viewer.status} go to the{' '}
+			<div className='block mx-auto font-somaRoman min-w-full w-full'>
+				You're signed in as {name} and you're {status} go to the{' '}
 				<Link href='/about'>
 					<a>about</a>
 				</Link>{' '}
@@ -28,19 +29,18 @@ const Index = () => {
 	);
 };
 
-
 export const getStaticProps: GetStaticProps = async () => {
-  const apolloClient = initializeApollo()
+	const apolloClient = initializeApollo();
 
-  await apolloClient.query({
-    query: ViewerDocument,
-  })
+	await apolloClient.query({
+		query: ViewerDocument
+	});
 
-  return {
-    props: {
-      initialApolloState: apolloClient.cache.extract(),
-    },
-  }
-}
+	return {
+		props: {
+			initialApolloState: apolloClient.cache.extract()
+		}
+	};
+};
 
 export default Index;

@@ -1,5 +1,9 @@
 module.exports = {
 	roots: ['<rootDir>'],
+	moduleNameMapper: {
+		'^@components(.*)$': '<rootDir>/components$1',
+		'^@lib(.*)$': '<rootDir>/lib$1'
+	},
 	moduleFileExtensions: ['js', 'ts', 'tsx', 'json'],
 	testPathIgnorePatterns: ['<rootDir>[/\\\\](node_modules|.next)[/\\\\]'],
 	transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$'],
@@ -9,5 +13,10 @@ module.exports = {
 			'graphql-let/jestTransformer',
 			{ subsequentTransformer: 'babel-jest' }
 		]
+	},
+	moduleNameMapper: {
+		'\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+			'<rootDir>/__mocks__/fileMock.js',
+		'\\.(css|less)$': 'identity-obj-proxy'
 	}
 };
