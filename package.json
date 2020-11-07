@@ -9,7 +9,7 @@
   "scripts": {
     "codegen": "graphql-let",
     "dev": "yarn codegen && next -p 3030",
-    "build": "yarn codegen && next build",
+    "build": "next build",
     "test": "yarn codegen && jest",
     "start": "next start -p 4040",
     "tsconfig:effective": "tsc --showConfig",
