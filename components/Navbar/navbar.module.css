@@ -14,6 +14,18 @@
 	@apply inline-block mx-4;
 }
 
+.nav {
+	@apply mx-3 grid grid-cols-2 w-full min-w-full;
+}
+
+.ul {
+	@apply col-span-1;
+}
+
+.divGreatGrandChild {
+	@apply col-span-1 z-10;
+}
+
 .divParent {
 	@apply bg-jujiHeaderAndIconGreen transform -translate-y-5 select-none;
 }

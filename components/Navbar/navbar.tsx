@@ -58,9 +58,9 @@ const Navbar: NavBarFC = ({ className }) => {
 								/>
 							</a>
 						</Link>
-						<nav className='space-x-4 mx-3 grid grid-cols-2 w-full min-w-full'>
-							<ul className='col-span-1'>{navList}</ul>
-							<div className='col-span-1 z-10'>
+						<nav className={css.nav}>
+							<ul className={css.ul}>{navList}</ul>
+							<div className={css.divGreatGrandChild}>
 								<NavbarUserButton />
 							</div>
 						</nav>

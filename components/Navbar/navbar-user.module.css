@@ -22,3 +22,19 @@
 		@apply outline-none;
 	}
 }
+
+.ul {
+    @apply relative grid grid-cols-2 justify-between w-full min-w-full transform translate-x-16;
+}
+
+.liOne {
+    @apply inline-block mx-4 text-right col-span-1;
+}
+
+.liTwo {
+    @apply inline-block mx-4 text-left col-span-1;
+}
+
+.pStyle {
+    @apply mx-2 my-1;
+}
