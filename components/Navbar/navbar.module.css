@@ -39,7 +39,7 @@
 }
 
 .logo {
-	@apply cursor-pointer transform duration-500 transition-all ease-in-out;
+	@apply cursor-pointer transform duration-500 transition-all ease-in-out py-2;
 
 	&:hover {
 		@apply shadow-md transition-colors fill-auxiliary duration-500;
