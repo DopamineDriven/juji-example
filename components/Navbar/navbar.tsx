@@ -12,7 +12,7 @@ interface NavRef {
 const links: NavRef[] = [
 	{
 		href: '/about',
-		label: 'About'
+		label: 'About Juji'
 	}
 ];
 interface NavbarProps {

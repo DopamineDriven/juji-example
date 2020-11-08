@@ -15,15 +15,15 @@
 }
 
 .nav {
-	@apply mx-3 grid grid-cols-2 w-full min-w-full;
+	@apply mx-3 grid grid-cols-6 w-full min-w-full;
 }
 
 .ul {
-	@apply col-span-1;
+	@apply col-span-3 text-right;
 }
 
 .divGreatGrandChild {
-	@apply col-span-1 z-10;
+	@apply col-span-2 z-10 content-end justify-end text-right transform translate-x-48;
 }
 
 .divParent {

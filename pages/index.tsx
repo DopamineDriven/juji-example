@@ -9,22 +9,31 @@ import { GetStaticProps } from 'next';
 const Index = () => {
 	const { viewer } = useViewerQuery().data!;
 	const { name, status } = viewer;
+
+	const Landing = () => (
+		<div className='block mx-auto font-somaRoman min-w-full w-full pl-5'>
+			You're signed in as {name} and you're {status} go to the{' '}
+			<Link href='/about'>
+				<a className=' text-tailwindBlue'>About</a>
+			</Link>{' '}
+			page.
+		</div>
+	);
+
+	const Nav = () => (
+		<div className='flex mx-5 my-5 min-w-full w-full'>
+			<Navbar className='min-w-full w-full border-b-2 border-afWhite -mx-5 bg-jujiHeaderAndIconGreen z-10' />
+		</div>
+	);
+
 	return (
 		<Fragment>
 			<Meta />
 			<Head>
 				<title>Juji Example</title>
 			</Head>
-			<div className='flex mx-5 my-5 min-w-full w-full'>
-				<Navbar className='min-w-full w-full border-b-2 border-afWhite -mx-5 bg-jujiHeaderAndIconGreen z-10' />
-			</div>
-			<div className='block mx-auto font-somaRoman min-w-full w-full'>
-				You're signed in as {name} and you're {status} go to the{' '}
-				<Link href='/about'>
-					<a className=' text-tailwindBlue'>about</a>
-				</Link>{' '}
-				page.
-			</div>
+			<Nav />
+			<Landing />
 		</Fragment>
 	);
 };
