@@ -42,7 +42,7 @@ const Navbar: NavBarFC = ({ className }) => {
 		<Fragment>
 			<div
 				className={
-					classNameParent + 'bg-jujiHeaderAndIconGreen transform -translate-y-5'
+					classNameParent + 'bg-jujiHeaderAndIconGreen transform -translate-y-5 select-none'
 				}
 			>
 				<div className='flex justify-between align-middle text-black flex-row py-2 px-4 relative transform transition-colors'>

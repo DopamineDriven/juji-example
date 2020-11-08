@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../../lib/constants';
+import { CMS_NAME, HOME_OG_IMAGE_URL } from '@lib/constants';
 
 const prodUrl =
-	'https://building-a-jamstack-store-starting-scaffold.vercel.app';
+	'https://juji-example.vercel.app/';
 
 const MetaData = () => {
 	return (
@@ -41,7 +41,7 @@ const MetaData = () => {
 				content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5'
 			/>
 			<meta name='format-detection' content='telephone=no' />
-			<title>Building a JAMstack Store</title>
+			<title>Juji Example</title>
 			<meta name='msapplication-TileColor' content='#da532c' />
 			<meta name='msapplication-config' content='/meta/browserconfig.xml' />
 			<meta name='theme-color' content='#ffffff' />
@@ -51,7 +51,7 @@ const MetaData = () => {
 			<meta httpEquiv='X-UA-Compatible' content='IE=edge' />
 			<meta
 				name='keywords'
-				content='nextjs, typescript, react, incremental static site regeneration, WPGraphQL, Apollo, GraphQL, headless wordpress, tailwindcss, vercel, figma'
+				content='nextjs, typescript, react, iSSG, Apollo-Micro-Server, Apollo-Client, GQL-let, postcss nesting, tailwindcss, vercel, serverless'
 			/>
 			<meta name='twitter:card' content='summary_large_image' />
 			<meta name='twitter:site' content='@Dopamine_Driven' />
@@ -61,7 +61,7 @@ const MetaData = () => {
 			<meta name='twitter:creator' content='@Dopamine_Driven' />
 			<meta property='og:type' content='website' />
 			<meta property='og:url' content={prodUrl} />
-			<meta property='og:title' content='Newline - Building a JAMstack Store' />
+			<meta property='og:title' content='Juji - Example' />
 			<meta property='og:description' content={`${CMS_NAME}`} />
 			<meta property='og:image' content={HOME_OG_IMAGE_URL} />
 			<meta property='og:image:width' content='2048' />

@@ -4,7 +4,7 @@
 // style={{ maskType: 'alpha' }}
 
 import { FC } from 'react';
-import svgAbstracted from '../../types/svg';
+import svgAbstracted from '@_types/svg';
 
 interface svgParameterized extends FC<svgAbstracted> {}
 

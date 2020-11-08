@@ -1,8 +1,8 @@
 .link {
-	@apply inline-flex mx-2 my-1 justify-items-center text-white text-xl leading-6 font-somaRoman font-medium transition ease-in-out cursor-pointer;
+	@apply inline-flex mx-2 my-1 justify-items-center text-white text-xl leading-6 font-somaRoman font-medium transition-colors duration-500 ease-in-out cursor-pointer;
 
 	&:hover {
-		@apply text-afWhite;
+		@apply text-jujiOrange transition-colors duration-500;
 	}
 
 	&:focus {

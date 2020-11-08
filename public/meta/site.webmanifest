@@ -1,7 +1,7 @@
 {
-	"name": "Building a JAMstack Store",
-	"short_name": "JAMstack",
-	"start_url": "https://building-a-jamstack-store.vercel.app",
+	"name": "Juji Example",
+	"short_name": "JUJI",
+	"start_url": "https://juji-example.vercel.app/",
 	"icons": [
 		{
 			"src": "/meta/android-chrome-192x192.png",
