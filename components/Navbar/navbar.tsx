@@ -25,7 +25,7 @@ const Navbar: NavBarFC = ({ className }) => {
 	const classNameParent = className;
 	const navList = links.map(link => (
 		<Fragment key={link.label}>
-			<li key={link.href} className='inline-block mx-4'>
+			<li key={link.href} className={css.listItem}>
 				<Link href={link.href} as={`${link.href}`} passHref key={link.label}>
 					<a
 						className={css.link}
@@ -46,15 +46,15 @@ const Navbar: NavBarFC = ({ className }) => {
 					'bg-jujiHeaderAndIconGreen transform -translate-y-5 select-none'
 				}
 			>
-				<div className='flex justify-between align-middle text-black flex-row py-2 px-4 relative transform transition-colors'>
-					<div className='flex flex-1 items-center pl-5'>
+				<div className={css.divChild}>
+					<div className={css.divGrandChild}>
 						<Link href='/'>
 							<a className={css.logo} aria-label='logo link to home'>
 								<JujiLogo
 									width='5vw'
 									height='5vw'
-									classNameStroke='hover:stroke-jujiOrange transition-colors duration-500 ease-in-out'
-									classNamePath='hover:fill-jujiOrange transition-colors duration-500 ease-in-out'
+									classNameStroke={css.logoStroke}
+									classNamePath={css.logoPath}
 								/>
 							</a>
 						</Link>

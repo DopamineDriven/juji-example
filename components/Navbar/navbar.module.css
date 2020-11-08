@@ -10,11 +10,43 @@
 	}
 }
 
+.listItem {
+	@apply inline-block mx-4;
+}
+
+.divParent {
+	@apply bg-jujiHeaderAndIconGreen transform -translate-y-5 select-none;
+}
+
+.divChild {
+	@apply flex justify-between align-middle text-black flex-row py-2 px-4 relative transform transition-colors;
+}
+
+.divGrandChild {
+	@apply flex flex-1 items-center pl-5;
+}
+
 .logo {
 	@apply cursor-pointer transform duration-500 transition-all ease-in-out;
 
 	&:hover {
 		@apply shadow-md transition-colors fill-auxiliary duration-500;
 		transform: scale(1.01);
+	}
+}
+
+.logoStroke {
+	@apply transition-colors duration-500 ease-in-out;
+
+	&:hover {
+		@apply stroke-jujiOrange duration-500 transition-colors ease-in-out;
+	}
+}
+
+.logoPath {
+	@apply transition-colors duration-500 ease-in-out;
+
+	&:hover {
+		@apply fill-jujiOrange duration-500 transition-colors ease-in-out;
 	}
 }
