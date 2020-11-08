@@ -11,11 +11,11 @@ interface NavRef {
 const links: NavRef[] = [
 	{
 		href: '/',
-		label: 'All'
+		label: 'Home'
 	},
 	{
-		href: '/clothes',
-		label: 'Clothes'
+		href: '/about',
+		label: 'About'
 	},
 	{
 		href: '/books',

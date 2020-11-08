@@ -21,7 +21,7 @@ const Index = () => {
 			<div className='block mx-auto font-somaRoman min-w-full w-full'>
 				You're signed in as {name} and you're {status} go to the{' '}
 				<Link href='/about'>
-					<a>about</a>
+					<a className=" text-tailwindBlue">about</a>
 				</Link>{' '}
 				page.
 			</div>
