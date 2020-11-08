@@ -1,6 +1,6 @@
 import { FC, Fragment } from 'react';
 import Link from 'next/link';
-import s from './navbar.module.css';
+import css from './navbar.module.css';
 import NewlineLogo from '../Logo/navbar-logo';
 
 interface NavRef {
@@ -35,7 +35,7 @@ const Navbar: NavBarFC = ({ className }) => {
 			<li key={link.href} className='inline-block mx-4'>
 				<Link href={link.href} as={`${link.href}`} passHref key={link.label}>
 					<a
-						className={s.link}
+						className={css.link}
 						key={'/' + link.href}
 						aria-label={`link to ${link.label}`}
 					>
@@ -51,7 +51,7 @@ const Navbar: NavBarFC = ({ className }) => {
 				<div className='flex justify-between align-center text-black flex-row py-2 px-4 md:pb-6 relative'>
 					<div className='flex flex-1 items-center'>
 						<Link href='/'>
-							<a className={s.logo} aria-label='logo link to home'>
+							<a className={css.logo} aria-label='logo link to home'>
 								<NewlineLogo width='5vw' height='5vw' />
 							</a>
 						</Link>

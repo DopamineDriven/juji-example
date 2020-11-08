@@ -1,5 +1,5 @@
 .link {
-	@apply inline-flex justify-items-center text-primary text-xl leading-6 font-medium transition ease-in-out cursor-pointer;
+	@apply inline-flex justify-items-center text-primary text-xl leading-6 font-somaRoman font-medium transition ease-in-out cursor-pointer;
 
 	&:hover {
 		@apply text-blue-700;
