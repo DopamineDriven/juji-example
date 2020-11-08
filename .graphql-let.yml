@@ -5,5 +5,5 @@ plugins:
   - typescript
   - typescript-operations
   - typescript-react-apollo
-  - typed-document-node
+  # - typed-document-node
 cacheDir: __generated__
