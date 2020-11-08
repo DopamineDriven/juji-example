@@ -106,26 +106,26 @@ Array [
                 className="inline-block mx-4"
               >
                 <a
-                  aria-label="link to All"
+                  aria-label="link to Home"
                   className="link"
                   href="/"
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                 >
-                  All
+                  Home
                 </a>
               </li>
               <li
                 className="inline-block mx-4"
               >
                 <a
-                  aria-label="link to Clothes"
+                  aria-label="link to About"
                   className="link"
-                  href="/clothes"
+                  href="/about"
                   onClick={[Function]}
                   onMouseEnter={[Function]}
                 >
-                  Clothes
+                  About
                 </a>
               </li>
               <li
@@ -148,7 +148,7 @@ Array [
     </div>
   </div>,
   <div
-    className="flex mx-auto text-somaRoman min-w-full w-full"
+    className="block mx-auto font-somaRoman min-w-full w-full"
   >
     You're signed in as 
     Baa
@@ -157,6 +157,7 @@ Array [
      go to the
      
     <a
+      className=" text-tailwindBlue"
       href="/about"
       onClick={[Function]}
       onMouseEnter={[Function]}
