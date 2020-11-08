@@ -11,10 +11,10 @@
 }
 
 .logo {
-	@apply cursor-pointer transform duration-100 ease-in-out;
+	@apply cursor-pointer transform duration-500 transition-all ease-in-out;
 
 	&:hover {
-		@apply shadow-md;
+		@apply shadow-md transition-colors fill-auxiliary duration-500;
 		transform: scale(1.01);
 	}
 }

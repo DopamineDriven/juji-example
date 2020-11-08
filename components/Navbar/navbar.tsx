@@ -1,7 +1,7 @@
 import { FC, Fragment } from 'react';
 import Link from 'next/link';
 import css from './navbar.module.css';
-import NewlineLogo from '../Logo/navbar-logo';
+import JujiLogo from '../Logo/navbar-logo';
 import NavbarUserButton from './navbar-user-buttons';
 
 interface NavRef {
@@ -42,14 +42,20 @@ const Navbar: NavBarFC = ({ className }) => {
 		<Fragment>
 			<div
 				className={
-					classNameParent + 'bg-jujiHeaderAndIconGreen transform -translate-y-5 select-none'
+					classNameParent +
+					'bg-jujiHeaderAndIconGreen transform -translate-y-5 select-none'
 				}
 			>
 				<div className='flex justify-between align-middle text-black flex-row py-2 px-4 relative transform transition-colors'>
 					<div className='flex flex-1 items-center pl-5'>
 						<Link href='/'>
 							<a className={css.logo} aria-label='logo link to home'>
-								<NewlineLogo width='5vw' height='5vw' />
+								<JujiLogo
+									width='5vw'
+									height='5vw'
+									classNameStroke='hover:stroke-jujiOrange transition-colors duration-500 ease-in-out'
+									classNamePath='hover:fill-jujiOrange transition-colors duration-500 ease-in-out'
+								/>
 							</a>
 						</Link>
 						<nav className='space-x-4 mx-3 grid grid-cols-2 w-full min-w-full'>

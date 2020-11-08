@@ -25,6 +25,12 @@
 	--text-auxiliary: #151515;
 	--text-tertiary: #505050;
 	--text-quaternary: #ffffff;
+
+	--fill-primary: #ffffff;
+	--fill-auxiliary: #ff9933;
+
+	--stroke-primary: #FFFFFF;
+	--stroke-auxiliary: #FF9933;
 	@apply font-header;
 	@apply font-somaRoman;
 	@apply font-somaDisplay;

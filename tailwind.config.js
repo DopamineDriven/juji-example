@@ -8,6 +8,14 @@ module.exports = {
 		content: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}']
 	},
 	theme: {
+		stroke: {
+			current: 'currentColor',
+			jujiOrange: '#FF9933'
+		},
+		fill: {
+			current: 'currentColor',
+			jujiOrange: '#FF9933'
+		},
 		extend: {
 			fontFamily: {
 				header: ['goudy-bookletter-1911', 'serif'],
@@ -40,8 +48,8 @@ module.exports = {
 				senary: 'var(--color-fill-quaternary)'
 			},
 			strokeColor: {
-				primary: 'var(--color-stroke-primary)',
-				auxiliary: 'var(--color-stroke-auxiliary'
+				primary: 'var(--stroke-primary)',
+				auxiliary: 'var(--stroke-auxiliary)'
 			},
 			colors: {
 				'accent-1': '#FAFAFA',
@@ -76,6 +84,110 @@ module.exports = {
 			}
 		}
 	},
-	variants: {},
+	variants: {
+		padding: ['responsive', 'last', 'first', 'hover', 'focus', 'even', 'odd'],
+		fontSize: ['responsive', 'last', 'first', 'hover', 'focus', 'even', 'odd'],
+		gap: ['responsive', 'last', 'first', 'hover', 'focus', 'even', 'odd'],
+		stroke: [
+			'responsive',
+			'hover',
+			'focus',
+			'last',
+			'first',
+			'even',
+			'odd',
+			'group-hover'
+		],
+		fill: [
+			'responsive',
+			'hover',
+			'focus',
+			'last',
+			'first',
+			'even',
+			'odd',
+			'group-hover'
+		],
+		gridTemplateColumns: [
+			'responsive',
+			'last',
+			'first',
+			'hover',
+			'focus',
+			'even',
+			'odd'
+		],
+		animation: [
+			'responsive',
+			'hover',
+			'focus',
+			'last',
+			'first',
+			'motion-safe',
+			'motion-reduce',
+			'even',
+			'odd'
+		],
+		transitionProperty: [
+			'responsive',
+			'hover',
+			'focus',
+			'last',
+			'first',
+			'motion-safe',
+			'motion-reduce',
+			'even',
+			'odd'
+		],
+		transitionDuration: [
+			'responsive',
+			'last',
+			'first',
+			'hover',
+			'focus',
+			'even',
+			'odd'
+		],
+		transitionTimingFunction: [
+			'responsive',
+			'last',
+			'first',
+			'hover',
+			'focus',
+			'even',
+			'odd'
+		],
+		transitionDelay: [
+			'responsive',
+			'last',
+			'first',
+			'hover',
+			'focus',
+			'even',
+			'odd'
+		],
+		scale: [
+			'responsive',
+			'hover',
+			'focus',
+			'active',
+			'group-hover',
+			'first',
+			'last',
+			'even',
+			'odd'
+		],
+		rotate: [
+			'responsive',
+			'hover',
+			'focus',
+			'active',
+			'group-hover',
+			'first',
+			'last',
+			'even',
+			'odd'
+		]
+	},
 	plugins: []
 };
