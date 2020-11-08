@@ -16,7 +16,7 @@ const Index = () => {
 				<title>Juji Example</title>
 			</Head>
 			<div className='flex mx-5 my-5 min-w-full w-full'>
-				<Navbar className='min-w-full w-full border-b-2 -mx-5' />
+				<Navbar className='min-w-full w-full border-b-2 border-afWhite -mx-5 bg-jujiHeaderAndIconGreen z-10' />
 			</div>
 			<div className='block mx-auto font-somaRoman min-w-full w-full'>
 				You're signed in as {name} and you're {status} go to the{' '}

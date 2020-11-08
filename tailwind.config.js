@@ -66,7 +66,13 @@ module.exports = {
 				eaWhite: '#EAEAEA',
 				afWhite: '#AFAFAF',
 				fiveOBlack: '#505050',
-				everythingIsBlue: '#007ACC'
+				jujiOrange: '#FF9933',
+				jujiHeaderAndIconGreen: '#006633',
+				jujiFontGreen: '#009933',
+				jujiDividerGreen: '#66CC99',
+				jujiEmailFormBg: '#CCCCCC',
+				jujiTextGray: '#999999',
+				offWhite: '#F0F1F2'
 			}
 		}
 	},

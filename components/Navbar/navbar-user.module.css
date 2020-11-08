@@ -1,0 +1,24 @@
+.linkLogIn {
+	@apply inline-flex col-span-1 mx-2 my-1 justify-items-center text-jujiOrange text-xl leading-6 font-somaRoman font-medium transition ease-in-out cursor-pointer;
+
+	&:hover {
+		@apply text-eaWhite;
+	}
+
+	&:focus {
+		@apply outline-none;
+    }
+}
+
+.linkSignUp {
+	@apply inline-flex  col-span-1 justify-items-center rounded-full bg-jujiOrange text-white text-xl leading-6 font-somaRoman font-medium transition ease-in-out cursor-pointer;
+
+	&:hover {
+        @apply text-white;
+        transform: scale(1.01);
+	}
+
+	&:focus {
+		@apply outline-none;
+	}
+}

@@ -1,8 +1,8 @@
 .link {
-	@apply inline-flex justify-items-center text-primary text-xl leading-6 font-somaRoman font-medium transition ease-in-out cursor-pointer;
+	@apply inline-flex mx-2 my-1 justify-items-center text-white text-xl leading-6 font-somaRoman font-medium transition ease-in-out cursor-pointer;
 
 	&:hover {
-		@apply text-blue-700;
+		@apply text-afWhite;
 	}
 
 	&:focus {
@@ -15,6 +15,6 @@
 
 	&:hover {
 		@apply shadow-md;
-		transform: scale(0.99);
+		transform: scale(1.01);
 	}
 }

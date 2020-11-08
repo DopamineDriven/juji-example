@@ -2,6 +2,7 @@ import { FC, Fragment } from 'react';
 import Link from 'next/link';
 import css from './navbar.module.css';
 import NewlineLogo from '../Logo/navbar-logo';
+import NavbarUserButton from './navbar-user-buttons';
 
 interface NavRef {
 	href: string;
@@ -10,16 +11,8 @@ interface NavRef {
 
 const links: NavRef[] = [
 	{
-		href: '/',
-		label: 'Home'
-	},
-	{
 		href: '/about',
 		label: 'About'
-	},
-	{
-		href: '/books',
-		label: 'Books'
 	}
 ];
 interface NavbarProps {
@@ -47,16 +40,23 @@ const Navbar: NavBarFC = ({ className }) => {
 	));
 	return (
 		<Fragment>
-			<div className={classNameParent}>
-				<div className='flex justify-between align-center text-black flex-row py-2 px-4 md:pb-6 relative'>
-					<div className='flex flex-1 items-center'>
+			<div
+				className={
+					classNameParent + 'bg-jujiHeaderAndIconGreen transform -translate-y-5'
+				}
+			>
+				<div className='flex justify-between align-middle text-black flex-row py-2 px-4 relative transform transition-colors'>
+					<div className='flex flex-1 items-center pl-5'>
 						<Link href='/'>
 							<a className={css.logo} aria-label='logo link to home'>
 								<NewlineLogo width='5vw' height='5vw' />
 							</a>
 						</Link>
-						<nav className='space-x-4 mx-3 block'>
-							<ul>{navList}</ul>
+						<nav className='space-x-4 mx-3 grid grid-cols-2 w-full min-w-full'>
+							<ul className='col-span-1'>{navList}</ul>
+							<div className='col-span-1 z-10'>
+								<NavbarUserButton />
+							</div>
 						</nav>
 					</div>
 				</div>
