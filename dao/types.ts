@@ -1,5 +1,6 @@
 import { gql } from '@apollo/client';
-import * as Apollo from '@apollo/client';
+import * as ApolloReactCommon from '@apollo/client';
+import * as ApolloReactHooks from '@apollo/client';
 export type Maybe<T> = T | null;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
 /** All built-in and custom scalars, mapped to their actual values */
@@ -97,15 +98,15 @@ export const ViewerDocument = gql`
  *   },
  * });
  */
-export function useViewerQuery(baseOptions?: Apollo.QueryHookOptions<ViewerQuery, ViewerQueryVariables>) {
-        return Apollo.useQuery<ViewerQuery, ViewerQueryVariables>(ViewerDocument, baseOptions);
+export function useViewerQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<ViewerQuery, ViewerQueryVariables>) {
+        return ApolloReactHooks.useQuery<ViewerQuery, ViewerQueryVariables>(ViewerDocument, baseOptions);
       }
-export function useViewerLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<ViewerQuery, ViewerQueryVariables>) {
-          return Apollo.useLazyQuery<ViewerQuery, ViewerQueryVariables>(ViewerDocument, baseOptions);
+export function useViewerLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<ViewerQuery, ViewerQueryVariables>) {
+          return ApolloReactHooks.useLazyQuery<ViewerQuery, ViewerQueryVariables>(ViewerDocument, baseOptions);
         }
 export type ViewerQueryHookResult = ReturnType<typeof useViewerQuery>;
 export type ViewerLazyQueryHookResult = ReturnType<typeof useViewerLazyQuery>;
-export type ViewerQueryResult = Apollo.QueryResult<ViewerQuery, ViewerQueryVariables>;
+export type ViewerQueryResult = ApolloReactCommon.QueryResult<ViewerQuery, ViewerQueryVariables>;
 export const ViewerRemoteDocument = gql`
     query ViewerRemote {
   viewerRemote {
@@ -130,15 +131,15 @@ export const ViewerRemoteDocument = gql`
  *   },
  * });
  */
-export function useViewerRemoteQuery(baseOptions?: Apollo.QueryHookOptions<ViewerRemoteQuery, ViewerRemoteQueryVariables>) {
-        return Apollo.useQuery<ViewerRemoteQuery, ViewerRemoteQueryVariables>(ViewerRemoteDocument, baseOptions);
+export function useViewerRemoteQuery(baseOptions?: ApolloReactHooks.QueryHookOptions<ViewerRemoteQuery, ViewerRemoteQueryVariables>) {
+        return ApolloReactHooks.useQuery<ViewerRemoteQuery, ViewerRemoteQueryVariables>(ViewerRemoteDocument, baseOptions);
       }
-export function useViewerRemoteLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<ViewerRemoteQuery, ViewerRemoteQueryVariables>) {
-          return Apollo.useLazyQuery<ViewerRemoteQuery, ViewerRemoteQueryVariables>(ViewerRemoteDocument, baseOptions);
+export function useViewerRemoteLazyQuery(baseOptions?: ApolloReactHooks.LazyQueryHookOptions<ViewerRemoteQuery, ViewerRemoteQueryVariables>) {
+          return ApolloReactHooks.useLazyQuery<ViewerRemoteQuery, ViewerRemoteQueryVariables>(ViewerRemoteDocument, baseOptions);
         }
 export type ViewerRemoteQueryHookResult = ReturnType<typeof useViewerRemoteQuery>;
 export type ViewerRemoteLazyQueryHookResult = ReturnType<typeof useViewerRemoteLazyQuery>;
-export type ViewerRemoteQueryResult = Apollo.QueryResult<ViewerRemoteQuery, ViewerRemoteQueryVariables>;
+export type ViewerRemoteQueryResult = ApolloReactCommon.QueryResult<ViewerRemoteQuery, ViewerRemoteQueryVariables>;
 import { ObjectID } from 'mongodb';
 export type UserRemoteDbObject = {
   _id: ObjectID,

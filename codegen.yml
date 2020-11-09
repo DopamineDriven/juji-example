@@ -10,3 +10,6 @@ generates:
       - "typescript-mongodb"
     config:
       skipTypename: true 
+      withHooks: true
+      apolloReactCommonImportFrom: "@apollo/client"
+      apolloReactHooksImportFrom: "@apollo/client"

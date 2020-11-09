@@ -6,4 +6,7 @@ plugins:
   - typescript-operations
   - typescript-react-apollo
   # - typed-document-node
+config:
+  apolloReactCommonImportFrom: "@apollo/client"
+  apolloReactHooksImportFrom: "@apollo/client"
 cacheDir: __generated__
