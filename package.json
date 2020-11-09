@@ -8,17 +8,18 @@
 	"private": true,
 	"scripts": {
 		"codegen": "graphql-let",
-		"mongo:codegen": "graphql-codegen --config codegen.yml",
-		"dev": "yarn codegen && next -p 3030",
-		"build": "yarn codegen && next build",
-		"test": "yarn codegen && jest",
+    "mongo:codegen": "graphql-codegen --config codegen.yml",
+    "collective:codegen": "yarn codegen && yarn mongo:codegen",
+		"dev": "yarn collective:codegen && next -p 3030",
+		"build": "yarn collective:codegen && next build",
+		"test": "yarn collective:codegen && jest",
 		"start": "next start -p 4040",
 		"tsconfig:effective": "tsc --showConfig",
 		"postinstall": "patch-typed-document-node"
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "yarn tsc && yarn codegen && pretty-quick && yarn tsconfig:effective"
+			"pre-commit": "yarn tsc && yarn collective:codegen && pretty-quick && yarn tsconfig:effective"
 		}
 	},
 	"dependencies": {
