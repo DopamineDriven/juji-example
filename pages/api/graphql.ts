@@ -1,5 +1,5 @@
 import { ApolloServer } from 'apollo-server-micro'
-import { schema } from '../../lib/schema'
+import { schema } from '@lib/schema'
 import "graphql-import-node";
 
 // import { makeExecutableSchema } from '@graphql-tools/schema';
@@ -13,4 +13,8 @@ export const config = {
   },
 }
 
-export default apolloServer.createHandler({ path: '/api/graphql' })
+async function start(req: any, res: any) {
+  return await apolloServer.createHandler({ path: '/api/graphql' })(req, res)
+}
+
+export default start;

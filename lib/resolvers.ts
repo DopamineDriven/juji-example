@@ -7,6 +7,8 @@ import { Collection, ObjectID } from 'mongodb';
 import { GraphQLResolveInfo } from 'graphql';
 import { UserResolvers } from '../__generated__/lib/type-defs.graphqls';
 import { UserRemote } from './type-defs.graphqls';
+// import { Context } from '@apollo/client';
+// import { ContextType } from 'react';
 
 const dbPromise = ConnectDatabase();
 
@@ -21,8 +23,19 @@ const fromUserRemoteObject = (dbObject: UserRemoteDbObject): UserRemote => ({
   status: dbObject.status
 });
 
+// const userResolvers: Resolvers<QueryResolvers> = {
+//   Query: {
+//     viewer: (_parent: {}, _args: any, _context: UserResolvers, _info: GraphQLResolveInfo) => {
+//       return { id: String(1), name: 'Andrew Ross', status: 'cached' }
+//     },
+    
+//   }
+
+// }
+
+
 const Query = {
-  viewer: (_parent: any, _args: any, _context: UserResolvers, _info: GraphQLResolveInfo) => {
+  viewer: (_parent: {}, _args: any, _context: UserResolvers, _info: GraphQLResolveInfo) => {
     return { id: String(1), name: 'John Smith', status: 'cached' }
   },
   viewerRemote: async (_parent: any, _args: any, userID : UserRemoteDbObject, _context: UserRemote, _info: GraphQLResolveInfo ) => {
