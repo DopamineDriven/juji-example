@@ -1,0 +1,12 @@
+overwrite: true
+schema: "**/*.graphqls"
+documents: "**/*.graphql"
+generates:
+  ./dao/types.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+      - "typescript-mongodb"
+    config:
+      skipTypename: true 

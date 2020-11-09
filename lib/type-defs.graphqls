@@ -1,3 +1,7 @@
 type Query {
-  viewer: User!
+	viewer: User!
+}
+
+type Query {
+	viewerRemote: [UserRemote]!
 }

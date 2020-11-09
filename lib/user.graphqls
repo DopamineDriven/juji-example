@@ -3,3 +3,9 @@ type User {
   name: String!
   status: String!
 }
+
+type UserRemote @entity {
+  id: ID! @id
+  name: String! @column
+  status: String! @column
+}

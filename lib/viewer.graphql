@@ -1,4 +1,5 @@
 # import Partial from './partial.graphql'
+# import PartialRemote from './partial.graphql'
 
 query Viewer {
   viewer {
@@ -7,3 +8,9 @@ query Viewer {
   }
 }
 
+query ViewerRemote {
+  viewerRemote {
+    ...PartialRemote
+    status
+  }
+}

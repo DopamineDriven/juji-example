@@ -21,6 +21,7 @@
 	"strictNullChecks": true,
 	"paths": {
 		"@components/*": ["components/*"],
+		"@dao/*": ["dao/*"],
 		"@lib/*": ["lib/*"],
 		"@pages/*": ["pages/*"],
 		"@styles/*": ["styles/*"],
