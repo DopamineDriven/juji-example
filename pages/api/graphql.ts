@@ -2,9 +2,6 @@ import { ApolloServer } from 'apollo-server-micro'
 import { schema } from '@lib/schema'
 import "graphql-import-node";
 
-// import { makeExecutableSchema } from '@graphql-tools/schema';
-// import { MongoClient } from 'mongodb';
-
 const apolloServer = new ApolloServer({ schema })
 
 export const config = {
