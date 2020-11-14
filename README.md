@@ -19,3 +19,5 @@ git rm -rf node_modules
 
 - Mocking CSS Modules in Jest
   - https://jestjs.io/docs/en/webpack#mocking-css-modules
+
+emotion init
